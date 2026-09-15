@@ -29,3 +29,9 @@ Extension, gönderi metinleri dışında hiçbir kişisel veri toplamıyor veya 
 ## Geri bildirim
 
 Sorun/öneri için bir [issue](../../issues) açabilirsin.
+
+## Destek
+
+Bu projeyi faydalı bulduysan bir kahve ısmarlayabilirsin ☕
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-support-yellow?logo=buy-me-a-coffee)](https://buymeacoffee.com/kerembors1f)
