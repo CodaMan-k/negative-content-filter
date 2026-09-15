@@ -1,0 +1,32 @@
+/* content.css */
+/* Postu tamamen kaldırmak yerine blur+tıkla-göster yapıyoruz,
+   çünkü display:none akışı sıçratır ve kullanıcıyı şaşırtır. */
+
+.negfilter-hidden {
+  position: relative;
+}
+
+.negfilter-hidden > *:not(.negfilter-reveal-btn) {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.negfilter-reveal-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 4px;
+  background: #f4212e14;
+  color: #f4212e;
+  border: 1px solid #f4212e33;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.negfilter-reveal-btn:hover {
+  background: #f4212e22;
+}

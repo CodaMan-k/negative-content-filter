@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Negatif İçerik Filtresi",
+  "version": "0.1.0",
+  "description": "Sosyal medya akışındaki olumsuz/negatif içerikleri tespit edip gizler.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy1iQEbs5ikuTZ3GBrFFMDMD3DwyMTupIQS+znRXg1K+z8sjcB8IP6rzfARNbu1Y0bxPNF7wFLkMvSCXzNYbYLKGhOSxQZWEBgD0HjH/46ZVIti45DlaV7lepvCcmg1TWVY7PRCZ/3C0+JoUMTFwv9n+CRs7x+fne0YpoXobA59OX2uPNucvWQ+yCCyZPTcEWEyceAXYOZEnN9NlnlVA+2OV/BZmx2wRJoCmbpsF/Mc2ivg0IyOrPNJWIHoCbsrTbTk0bYTfUpv7hePmUYpPvAaa59kLWOhqCWiWQ/RqtlMUbx1lVX6GQKV/ETpWMjAJ5az3tAJFvxpD651/0URkbvQIDAQAB",
+
+  "permissions": [
+    "storage"
+  ],
+
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://user-lenovo-g500.tailb6efdb.ts.net/*"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Negatif İçerik Filtresi"
+  }
+}
